@@ -85,10 +85,10 @@ License / Usage: http://www.marcos-software.de
     <br><br>
     
     <font size="2">
-    	$#Text.Hersteller#$<br>
+    	<!--$#Text.Hersteller#$<br>
     	$#Text.HAN#$<br>
     	$#Merkmal.Inhalt#$<br>
-	
+	-->
 	<!--
 	$#Merkmal.Abfüller#$<br>
 	$#Merkmal.Abgefüllt am:#$<br>
@@ -148,7 +148,7 @@ License / Usage: http://www.marcos-software.de
 	</font>
 	
 	<br><br><br> 
-	
+	<!--
 	<button onclick="showhidewhisky()">Whisky</button>
 	
 	<button onclick="showhidewein()">Wein</button>
@@ -156,11 +156,43 @@ License / Usage: http://www.marcos-software.de
 	<button onclick="showhiderum()">Rum</button>
 	
 	<button onclick="showhidezigarren()">Zigarren</button>
-
+	-->
+	
+	<div id="allgemein" class="hide">
+		<div id="allgemein">
+			<table align="left" border="1">
+				<caption>Allgemein Inhalte</caption>
+					<tr>
+						<td>Alkoholgehalt</td> 
+						<td>$#Merkmal.Alkoholgehalt#$</td> 
+					</tr>
+					<tr> 
+						<td>HAN:</td>
+						<td>$#Text.HAN#$</td> 
+					</tr>
+					<tr> 
+						<td>Inhalt:</td>
+						<td>$#Merkmal.Inhalt#$</td> 
+					</tr>
+					<tr> 
+						<td>Hersteller:</td>
+						<td>$#Text.Hersteller#$</td> 
+					</tr>
+					<tr> 
+						<td>Hersteller/Vertrieb:</td>
+						<td>$#Merkmal.Hersteller / Vertrieb#$</td> 
+					</tr>
+				
+			</table>
+		</div>
+	</div>
+	
+<br><br>	
+	
 	<div id="inhalt-whisky" class="hide">
 		<div id="whisky">
-			<table>
-				<caption>Merkmale Whisky</caption>
+			<table align="left" border="1">
+				<caption>Merkmale von Whisky</caption>
 					<tr>
 						<th>Merkmal</th>
 						<th>Wert</th>
@@ -189,22 +221,64 @@ License / Usage: http://www.marcos-software.de
 						<td>Alter</td>
 						<td>$#Merkmal.Alter#$</td>
 					</tr>
+					<tr>
+						<td>Alter</td>
+						<td>$#Merkmal.Alter#$</td>
+					</tr>
+				
 			</table>
 		</div>
 	</div>
 		
 	<div id="inhalt-wein" class="hide">
 		<div id="wein">
-			<table>
-				<caption>Merkmale Wein </caption>
+			<table align="left" border="1">
+				<caption>Merkmale von Wein </caption>
 					<tr>
 						<th>Merkmal</th>
 						<th>Wert</th>
 					</tr>
-					<tr> 
-						<td>Spalte 1</td>
-						<td>Spalte 2</td> 
+					<tr>
+						<td>Region:</td>
+						<td>$#Merkmal.Region#$</td> 
 					</tr>
+					<tr> 
+						<td>Anbaugebiet:</td>
+						<td>$#Merkmal.Anbaugebiet#$</td> 
+					</tr>
+					<tr> 
+						<td>Weingut:</td>
+						<td>$#Merkmal.Weingut#$</td> 
+					</tr>
+					<tr>
+						<td>Alkoholgehalt:</td> 
+						<td>$#Merkmal.Alkoholgehalt#$</td> 
+					</tr>
+					<tr>
+						<td>Enthält:</td>
+						<td>$#Merkmal.Enthält#$<br></td>
+					</tr>
+					<tr>
+						<td>Weinart:</td>
+						<td>$#Merkmal.Weinart#$<br></td>
+					</tr>
+					<tr>
+						<td>Sensorische Beschreibung:</td>
+						<td>$#Merkmal.Sensorische Beschreibung#$<br></td>
+					</tr>
+					<tr>
+						<td>Rebsorte(n):</td>
+						<td>$#Merkmal.Rebsorten(n)#$<br></td>
+					</tr>
+					<tr>
+						<td>Enthält:</td>
+						<td>$#Merkmal.Enthält#$<br></td>
+					</tr>
+					<tr>
+						<td>Enthält:</td>
+						<td>$#Merkmal.Enthält#$<br></td>
+					</tr>
+					
 			</table>
 		</div>
 	</div>
@@ -212,8 +286,8 @@ License / Usage: http://www.marcos-software.de
 	<div id="inhalt-rum" class="hide">
 	
 		<div id="rum">
-			<table>
-				<caption>Merkmale Rum </caption>
+			<table align="left" border="1">
+				<caption>Merkmale von Rum </caption>
 					<tr>
 						<th>Merkmal</th>
 						<th>Wert</th>
@@ -229,8 +303,8 @@ License / Usage: http://www.marcos-software.de
 	<div id="inhalt-zigarren" class="hide">
 
 		<div id="zigarren">
-			<table>
-				<caption>Merkmale Zigarren </caption>
+			<table align="left" border="1">
+				<caption>Merkmale von Zigarren </caption>
 					<tr>
 						<th>Merkmal</th>
 						<th>Wert</th>
@@ -243,9 +317,7 @@ License / Usage: http://www.marcos-software.de
 		</div>
 	</div>
 
-
-<!--
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 		<script type="text/javascript">
 			function toggleDiv(divId) {
 				$("#"+divId).toggle();
@@ -267,8 +339,7 @@ License / Usage: http://www.marcos-software.de
 </div>
 -->
 
-
-
+<br>
 	
     <table border="0" cellpadding="0" cellspacing="0">
      <tr>
